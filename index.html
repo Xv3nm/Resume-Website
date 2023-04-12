@@ -8,7 +8,7 @@
 
         <!-- =====BOX ICONS===== -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
         <title>Jordan Belsito</title>
     </head>
@@ -203,5 +203,71 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js?=1001"></script>
+        <script>
+            /* EMAIL SERVICE*/
+            (function() {
+                emailjs.init("ZmLoboHJlbQAaWKZf"); // Replace YOUR_USER_ID with the user ID from your EmailJS account
+            })();
+
+            function setCookie(cname, cvalue, exminutes) {
+                const d = new Date();
+                d.setTime(d.getTime() + (exminutes * 60 * 1000));
+                const expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                const name = cname + "=";
+                const decodedCookie = decodeURIComponent(document.cookie);
+                const ca = decodedCookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function sendEmail() {
+                const name = document.querySelector('.contact__input[type="text"]').value;
+                const email = document.querySelector('.contact__input[type="mail"]').value;
+                const message = document.querySelector('.contact__input[type="textarea"]').value;
+
+                const emailParams = {
+                    from_name: name,
+                    from_email: email,
+                    to_email: 'Jordanb0728@gmail.com',
+                    message: '[My Site] | ' + name + ' | ' + email + '\n\n' + message,
+                };
+
+
+                emailjs.send('service_3xuyqb7', 'template_1azsokp', emailParams)
+                    .then((response) => {
+                        console.log('Email sent successfully:', response);
+                        setCookie('lastEmailSent', Date.now(), 5);
+                        alert('Email sent successfully.');
+                    })
+                    .catch((error) => {
+                        console.error('Error sending email:', error);
+                    });
+            }
+
+            document.querySelector('.contact__button').addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const lastEmailSent = getCookie('lastEmailSent');
+                const timeElapsed = (Date.now() - lastEmailSent) / (1000 * 60); // Time elapsed in minutes
+
+                if (timeElapsed >= 5 || !lastEmailSent) {
+                    sendEmail();
+                } else {
+                    alert('Please wait for 5 minutes before sending another email.');
+                }
+            });
+        </script>
     </body>
 </html>
