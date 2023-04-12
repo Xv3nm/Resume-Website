@@ -262,10 +262,10 @@
                 const lastEmailSent = getCookie('lastEmailSent');
                 const timeElapsed = (Date.now() - lastEmailSent) / (1000 * 60); // Time elapsed in minutes
 
-                if (timeElapsed >= 5 || !lastEmailSent) {
+                if (timeElapsed >= 30 || !lastEmailSent) {
                     sendEmail();
                 } else {
-                    alert('Please wait for 5 minutes before sending another email.');
+                    alert('Please wait for 30 minutes before sending another email. If it seems like something looks wrong in the message, I will reach out and confirm your details.');
                 }
             });
         </script>
