@@ -288,18 +288,29 @@ img{
   border-radius: .5rem;
   z-index: var(--z-back);
 }
-.skills__html{
-  width: 95%;
-}
-.skills__css{
+.skills__lua{
   width: 85%;
+}
+.skills__python{
+  width: 70%;
+}
+.skills__html5{
+  width: 70%;
 }
 .skills__js{
   width: 65%;
 }
-.skills__ux{
-  width: 85%;
+.skills__css{
+  width: 55%;
 }
+
+.skills__vscode{
+  width: 75%;
+}
+.skills__unity{
+  width: 15%;
+}
+
 .skills__img{
   border-radius: .5rem;
 }
