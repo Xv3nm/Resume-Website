@@ -184,7 +184,7 @@
                     <form action="" class="contact__form">
                         <input type="text" placeholder="Name" class="contact__input">
                         <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <textarea id="contact__message" cols="0" rows="10" class="contact__input"></textarea>
                         <input type="button" value="Send" class="contact__button button">
                     </form>
                 </div>
@@ -206,7 +206,7 @@
         <script>
             /* EMAIL SERVICE*/
             (function() {
-                emailjs.init("ZmLoboHJlbQAaWKZf"); // Replace YOUR_USER_ID with the user ID from your EmailJS account
+                emailjs.init("ZmLoboHJlbQAaWKZf");
             })();
 
             function setCookie(cname, cvalue, exminutes) {
@@ -235,7 +235,7 @@
             function sendEmail() {
                 const name = document.querySelector('.contact__input[type="text"]').value;
                 const email = document.querySelector('.contact__input[type="mail"]').value;
-                const message = document.querySelector('.contact__input[type="textarea"]').value;
+                const message = document.querySelector('#contact__message').value;
 
                 const emailParams = {
                     from_name: name,
