@@ -10,15 +10,16 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script src="assets/js/typed.js"></script>
 
         <title>Jordan Belsito</title>
     </head>
     <body>
         <!--===== HEADER =====-->
-        <header class="l-header">
+        <header class="l-header" id="header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Jordan</a>
+                    <a href="#header" class="nav__logo">Jordan</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -40,9 +41,9 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Jordan</span><br> an aspiring devloper</h1>
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Jordan</span><br><typed-header> an aspiring devloper</typed-header></h1>
 
-                    <a href="#" class="button">Contact</a>
+                    <a href="#contact" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
@@ -178,6 +179,13 @@
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js?=1002"></script>
         <script>
+            /* TYPED.JS */
+            var typed = new Typed('typed-header', {
+                strings: ["First sentence.", "Second sentence."],
+                typeSpeed: 30
+            });
+
+
             /* EMAIL SERVICE*/
             (function() {
                 emailjs.init("ZmLoboHJlbQAaWKZf");
