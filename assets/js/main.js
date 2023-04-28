@@ -49,7 +49,7 @@ function findElementInView() {
     } else if (isInViewport(aboutTextElement)) {
         // If element is in viewport, do something
         console.log('about__text is in viewport');
-        var typed__about = new Typed('.about__text', {
+        var typed = new Typed('typed-desc', {
             strings: ["","I'm a Front & Back-end developer in Boiling Springs, SC." +
             "I've always been interested in coding and devlopment in games, websites, and personal projects." +
             "I plan to have a future in Networking or development."],
