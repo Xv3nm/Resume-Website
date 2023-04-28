@@ -26,6 +26,41 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+
+/*===== VISIBILITY FUNTION =====*/
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+/*===== IS about__text VISIBLE? =====*/
+function findElementInView() {
+    const aboutTextElement = document.querySelector('.about__text');
+
+    if (!aboutTextElement) {
+        // If element not found, loop again in 200ms.
+        setTimeout(findElementInView, 200);
+    } else if (isInViewport(aboutTextElement)) {
+        // If element is in viewport, do something
+        console.log('about__text is in viewport');
+        var typed__about = new Typed('.about__text', {
+            strings: ["","I'm a Front & Back-end developer in Boiling Springs, SC." +
+            "I've always been interested in coding and devlopment in games, websites, and personal projects." +
+            "I plan to have a future in Networking or development."],
+            typeSpeed: 30
+        });
+    } else {
+        // If element found, but not in viewport, loop again in 200ms.
+        setTimeout(findElementInView, 200);
+    }
+}
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -56,3 +91,5 @@ sr.reveal('.work__img',{interval: 200});
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__input',{interval: 200}); 
+
+window.onload = findElementInView;
