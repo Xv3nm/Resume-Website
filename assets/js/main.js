@@ -51,9 +51,9 @@ function findElementInView() {
         console.log('about__text is in viewport');
         var typed = new Typed('typed-desc', {
             strings: ["","I'm a Front and Back-end developer in Boiling Springs, SC." +
-            "I've always been interested in coding and devlopment in games, websites, and personal projects." +
-            "I plan to have a future in Networking or development."],
-            typeSpeed: 30
+            " I've always been interested in coding and devlopment in games, websites, and personal projects." +
+            " I plan to have a future in Networking or development."],
+            typeSpeed: 16
         });
     } else {
         // If element found, but not in viewport, loop again in 200ms.
