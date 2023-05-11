@@ -55,7 +55,7 @@ function findElementInView() {
             " I have experience in System Administration, Network Configuration and Management, Development, Programming, and much more."],
             typeSpeed: 16,
             callback: function() {
-                $('typed-desc').html($('typed-desc').html + '<a href="assets/resume.pdf"> [My Resume[ </a>')
+                $('typed-desc').html($('typed-desc').html() + '<a href="assets/resume.pdf"> [My Resume] </a>');
             }
         });
     } else {
