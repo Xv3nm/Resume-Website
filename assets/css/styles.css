@@ -289,6 +289,9 @@ img{
   z-index: var(--z-back);
 }
 
+.skills__troubleshooting{
+  width: 100%;
+}
 .skills__python{
   width: 85%;
 }
@@ -303,6 +306,9 @@ img{
 }
 .skills__cpp{
   width: 25%;
+}
+.skills__etc{
+  width: 0%;
 }
 
 .skills__img{
