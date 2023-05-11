@@ -50,12 +50,11 @@ function findElementInView() {
         // If element is in viewport, do something
         console.log('about__text is in viewport');
         var typed = new Typed('typed-desc', {
-            strings: ["","I'm a Front and Back-end developer and pursuing a career as an IT Specialist in Boiling Springs, SC." +
-            " I've always been interested in coding, devlopment, websites, and Information Technology." +
-            " I have experience in System Administration, Network Configuration and Management, Development, Programming, and much more."],
+            strings: [""," I've always been interested in coding, devlopment, websites, and Information Technology." +
+            " I have experience in System Administration, Network Configuration/Management, Development, Programming, and much more."],
             typeSpeed: 16,
-            callback: function() {
-                $('typed-desc').html($('typed-desc').html() + '<a href="assets/resume.pdf"> [My Resume] </a>');
+            onComplete: function(self) {
+                $(self.el).append('<a href="assets/resume.pdf"> [My Resume] </a>');
             }
         });
     } else {
