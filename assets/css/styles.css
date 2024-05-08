@@ -412,7 +412,7 @@ img{
     height: 100vh;
   }
   .home__data{
-    align-self: flex-end;
+    align-self: center;
   }
   .home__social{
     padding-top: 0;
@@ -426,7 +426,7 @@ img{
   }
   .home__img{
     width: 457px;
-    bottom: 15%;
+    bottom: 42%;
   }
 
   .about__container, .skills__container{
