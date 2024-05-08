@@ -313,6 +313,7 @@ img{
 
 .skills__img{
   border-radius: .5rem;
+  width: 110px;
 }
 
 /* ===== WORK =====*/
