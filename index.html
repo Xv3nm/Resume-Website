@@ -318,12 +318,12 @@
                 event.preventDefault();
 
                 const lastEmailSent = getCookie('lastEmailSent');
-                const timeElapsed = (Date.now() - lastEmailSent) / (1000 * 60); // Time elapsed in minutes
+                const timeElapsed = (Date.now() - lastEmailSent) / (3000); // Time elapsed in minutes
 
-                if (timeElapsed >= 30 || !lastEmailSent) {
+                if (timeElapsed >= 3 || !lastEmailSent) {
                     sendEmail();
                 } else {
-                    alert('Please wait for 30 minutes before sending another email. If it seems like something looks wrong in the message, I will reach out and confirm your details.');
+                    alert('Please wait for 3 minutes before sending another email. If it seems like something looks wrong in the message, I will reach out and confirm your details.');
                 }
             });
         </script>
