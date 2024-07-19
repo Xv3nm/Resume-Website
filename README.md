@@ -1,9 +1,9 @@
-# Hi there, I'm Jordan (18) - aka [Totem][github] or [Xv3nm][github]👋 
+# Hi there, I'm Jordan (18)
 
 [![website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fjordanbelsito.com)](https://jordanbelsito.com)
 [![gmail](https://img.shields.io/badge/jordanb0728@gmail.com-Gmail-brightgreen?style=for-the-badge)](https://mail.google.com/mail/u/?authuser=jordanb0728@gmail.com)
 
-## I'm a front-end and back-end developer!
+## I'm a hobby dev, with a lot of projects I hide from the world. Mostly looking to get into cyber security
 
 - 🌱 I’m currently learning as much as I can.
 - 🥅 Goals: Obtain an Entry Level Job and build upon my current knowledge!
